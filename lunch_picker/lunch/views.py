@@ -9,3 +9,6 @@ def register(request):
 
 def login(request):
   return HttpResponse("You've landed on the log in page.")
+
+def places(request):
+  return HttpResponse("You've landed on the results page.")

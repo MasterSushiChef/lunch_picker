@@ -1,12 +1,25 @@
 p {
-  color: green;
+  color: orange;
   padding: 10px 10px;
+}
+
+body {
+  background-color: lightyellow;
 }
 
 .lunchSelect {
   display: inline-block;
   height: auto;
   width: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+#header {
+  display: inline-block; 
+  text-align: center;
 }
 
 #title {
@@ -17,22 +30,16 @@ p {
   background-color: orange;
   color: black;
   padding: 14px 20px;
-  text-align: center;
 }
 #register{
   background-color: orange;
   color: black;
   padding: 14px 20px;
-  text-align: center;
 }
 
 #mainButton {
   background-color: chocolate;
-  border: none;
+  color: black;
   padding: 15px 32px;
   font-size: large;
-}
-
-.center {
-  text-align: center;
 }

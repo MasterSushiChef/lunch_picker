@@ -7,16 +7,17 @@
 </head>
 
 <body>
-  <div style="text-align: center;">
-    <div style="display: inline-block; text-align: center;">
+  <div class="center">
+    <div id="header">
       <h1 id="title">Lunch Picker</h1>
       <p>Lunch Picker temporary tag line or something.</p>
       <a id="login" href="{% url 'lunch:login' %}">Log in</a>
       <a id="register" href="{% url 'lunch:register' %}">Register</a>
     </div>
   </div>
+  <br><br>
 
-  <p class="center">
+  <div class="center">
     <select class="lunchSelect">
       <option selected disabled hidden>Choose price range</option>
       <option><$10</option>
@@ -47,8 +48,11 @@
       <option>Korean</option>
       <option>Any</option>
     </select><br>
-  </p>
+  </div>
+  <br><br>
 
-  <p class="center"><button type="button" id="mainButton">Find places to eat.</button></p>
+  <div class="center">
+    <a id="mainButton" href="{% url 'lunch:places' %}">Find places to eat</a>
+  </div>
 </body>
 
