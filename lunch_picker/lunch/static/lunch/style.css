@@ -1,0 +1,38 @@
+p {
+  color: green;
+  padding: 10px 10px;
+}
+
+.lunchSelect {
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+#title {
+  text-shadow: 2px 2px orange;
+}
+
+#login {
+  background-color: orange;
+  color: black;
+  padding: 14px 20px;
+  text-align: center;
+}
+#register{
+  background-color: orange;
+  color: black;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+#mainButton {
+  background-color: chocolate;
+  border: none;
+  padding: 15px 32px;
+  font-size: large;
+}
+
+.center {
+  text-align: center;
+}

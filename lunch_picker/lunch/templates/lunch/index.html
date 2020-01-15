@@ -1,0 +1,54 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'lunch/style.css' %}">
+
+<head>
+  <title>Lunch Picker</title>
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <div style="display: inline-block; text-align: center;">
+      <h1 id="title">Lunch Picker</h1>
+      <p>Lunch Picker temporary tag line or something.</p>
+      <a id="login" href="{% url 'lunch:login' %}">Log in</a>
+      <a id="register" href="{% url 'lunch:register' %}">Register</a>
+    </div>
+  </div>
+
+  <p class="center">
+    <select class="lunchSelect">
+      <option selected disabled hidden>Choose price range</option>
+      <option><$10</option>
+      <option>$11-$20</option>
+      <option>$21-$30</option>
+      <option>>$31</option>
+      <option>Any</option>
+    </select>
+    <select class="lunchSelect">
+      <option selected disabled hidden>Choose location range</option>
+      <option>within 3 mi.</option> 
+      <option>3-5 mi.</option>
+      <option>5-10 mi.</option>
+      <option>>10 mi.</option>
+      <option>Any</option>
+    </select>
+    <select class="lunchSelect">
+      <option selected disabled hidden>Choose rating range</option>
+      <option>4-5 stars</option>
+      <option>2-3 stars</option>
+      <option>Any</option>
+    </select>
+    <select class="lunchSelect">
+      <option selected disabled hidden>Choose cuisine type</option>
+      <option>American</option>
+      <option>Chinese</option>
+      <option>Japanese</option>
+      <option>Korean</option>
+      <option>Any</option>
+    </select><br>
+  </p>
+
+  <p class="center"><button type="button" id="mainButton">Find places to eat.</button></p>
+</body>
+
