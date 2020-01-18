@@ -17,42 +17,46 @@
   </div>
   <br><br>
 
-  <div class="center">
-    <select class="lunchSelect">
-      <option selected disabled hidden>Choose price range</option>
-      <option><$10</option>
-      <option>$11-$20</option>
-      <option>$21-$30</option>
-      <option>>$31</option>
-      <option>Any</option>
-    </select>
-    <select class="lunchSelect">
-      <option selected disabled hidden>Choose location range</option>
-      <option>within 3 mi.</option> 
-      <option>3-5 mi.</option>
-      <option>5-10 mi.</option>
-      <option>>10 mi.</option>
-      <option>Any</option>
-    </select>
-    <select class="lunchSelect">
-      <option selected disabled hidden>Choose rating range</option>
-      <option>4-5 stars</option>
-      <option>2-3 stars</option>
-      <option>Any</option>
-    </select>
-    <select class="lunchSelect">
-      <option selected disabled hidden>Choose cuisine type</option>
-      <option>American</option>
-      <option>Chinese</option>
-      <option>Japanese</option>
-      <option>Korean</option>
-      <option>Any</option>
-    </select><br>
-  </div>
-  <br><br>
+  <form action="{% url 'lunch:places' %}" method="post">
+    {% csrf_token %}
+    <div class="center">
+      <select name="price" class="lunchSelect">
+        <option selected disabled hidden>Choose price range</option>
+        <option><$10</option> 
+        <option>$11-$20</option>
+        <option>$21-$30</option>
+        <option>>$31</option>
+        <option>Any</option>
+      </select>
+      <select name="location" class="lunchSelect">
+        <option selected disabled hidden>Choose location range</option>
+        <option>within 3 mi.</option>
+        <option>3-5 mi.</option>
+        <option>5-10 mi.</option>
+        <option>>10 mi.</option>
+        <option>Any</option>
+      </select>
+      <select name="rating" class="lunchSelect">
+        <option selected disabled hidden>Choose rating range</option>
+        <option>4-5 stars</option>
+        <option>2-3 stars</option>
+        <option>Any</option>
+      </select>
+      <select name="cuisine" class="lunchSelect">
+        <option selected disabled hidden>Choose cuisine type</option>
+        <option>American</option>
+        <option>Chinese</option>
+        <option>Japanese</option>
+        <option>Korean</option>
+        <option>Any</option>
+      </select><br>
+    </div>
 
-  <div class="center">
-    <a id="mainButton" href="{% url 'lunch:places' %}">Find places to eat</a>
-  </div>
+    <br>
+
+    <div class="center">
+      <input id="mainButton" type="submit" value="Find places to eat">
+    </div>
+  </form>
 </body>
 

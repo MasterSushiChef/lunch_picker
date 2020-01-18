@@ -1,0 +1,17 @@
+{% load static %}
+
+<head>
+  <title>Results</title>
+</head>
+
+<body>
+  {% if error_msg %}
+  <p><strong>{{ error_msg }}</strong></p>
+  {% else %}
+  <p>Price: {{ price }}</p>
+  <p>Location: {{ location }}</p>
+  <p>Rating: {{ rating }}</p>
+  <p>Cuisine: {{ cuisine }}</p>
+  {% endif %}
+
+</body>
