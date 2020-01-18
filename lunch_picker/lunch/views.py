@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .places import get_restaurants
 
 def index(request):
   return render(request, 'lunch/index.html')
@@ -23,15 +24,20 @@ def places(request):
         'location': '',
         'rating': '',
         'cuisine': '',
-        'error_msg': "You didn't select something."
+        'name_list': '',
+        'error_msg': "You didn't select something.",
       })
 
     # Call places.py and searches 'restaurant' and then returns info based on user parameters
+    name_list = get_restaurants()
 
-  return render(request, 'lunch/places.html', {
-    'price': price,
-    'location': location,
-    'rating': rating,
-    'cuisine': cuisine,
-    'error_msg': '',
-  })
+    return render(request, 'lunch/places.html', {
+      'price': price,
+      'location': location,
+      'rating': rating,
+      'cuisine': cuisine,
+      'name_list': name_list,
+      'error_msg': '',
+    })
+  else:
+    return "not a POST request."

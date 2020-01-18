@@ -6,12 +6,16 @@
 
 <body>
   {% if error_msg %}
-  <p><strong>{{ error_msg }}</strong></p>
+    <p><strong>{{ error_msg }}</strong></p>
   {% else %}
-  <p>Price: {{ price }}</p>
-  <p>Location: {{ location }}</p>
-  <p>Rating: {{ rating }}</p>
-  <p>Cuisine: {{ cuisine }}</p>
+    <p>Price: {{ price }}</p>
+    <p>Location: {{ location }}</p>
+    <p>Rating: {{ rating }}</p>
+    <p>Cuisine: {{ cuisine }}</p>
+    <br>
+  {% for name in name_list %}
+    <p>{{ name }}</p>
+  {% endfor %}
   {% endif %}
 
 </body>
