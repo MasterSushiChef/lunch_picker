@@ -4,21 +4,28 @@
 
 <head>
   <title>Lunch Picker</title>
+  <script type='text/javascript' src="{% static 'lunch/location.js' %}" async></script>
 </head>
 
 <body>
   <div class="center">
     <div id="header">
       <h1 id="title">Lunch Picker</h1>
-      <p>Lunch Picker temporary tag line or something.</p>
-      <a id="login" href="{% url 'lunch:login' %}">Log in</a>
-      <a id="register" href="{% url 'lunch:register' %}">Register</a>
+      <p id="tagline">Lunch Picker temporary tag line or something.</p>
     </div>
   </div>
-  <br><br>
-
+ 
   <form action="{% url 'lunch:places' %}" method="post">
     {% csrf_token %}
+
+    <!--Streamline user experience in getting location, perhaps with status messages or automatically fetching
+    location information. Style buttons and dropdown menus.-->
+    <div class="center">
+      <p id="userLocation">User Location: <button type="button" onclick="getLocation()">Get my location</button></p>
+      <p>Latitude: <input type="text" name="lat" id="lat"> Longitude: <input type="text" name="lng" id="lng"></p>
+    </div>
+    <br>
+
     <div class="center">
       <select name="price" class="lunchSelect">
         <option selected disabled hidden>Choose price range</option>

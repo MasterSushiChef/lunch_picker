@@ -18,6 +18,8 @@ def places(request):
       location = request.POST['location']
       rating = request.POST['rating']
       cuisine = request.POST['cuisine']
+      lat = request.POST['lat']
+      lng = request.POST['lng']
     except KeyError: # Checks if user has selected all fields
       return render(request, 'lunch/places.html', {
         'price': '',
@@ -29,7 +31,7 @@ def places(request):
       })
 
     # Call places.py and searches 'restaurant' and then returns info based on user parameters
-    name_list = get_restaurants()
+    name_list = get_restaurants(lat, lng)
 
     return render(request, 'lunch/places.html', {
       'price': price,
