@@ -1,6 +1,6 @@
 p {
-  color: orange;
-  padding: 10px 10px;
+  color: black;
+  padding: 2px 2px;
 }
 
 body {
@@ -43,4 +43,12 @@ body {
   padding: 15px 32px;
   font-size: large;
   font-family: 'Times New Roman', Times, serif;
+}
+
+#userLocation {
+  font-size: large;
+}
+
+#tagline {
+  color: orange;
 }
